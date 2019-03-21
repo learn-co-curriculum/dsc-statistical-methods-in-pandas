@@ -3,7 +3,7 @@
 
 ## Introduction
 
-In this lesson you'll learn how to use some of the key summary statistics methods in Pandas.
+In this lesson, you'll learn how to use some of the key summary statistics methods in Pandas.
 
 ## Objectives:
 
@@ -377,7 +377,7 @@ df['Age'].head()
 
 
 
-# Conclusion
+## Summary
 
 In this lesson, you learned how to:
 
