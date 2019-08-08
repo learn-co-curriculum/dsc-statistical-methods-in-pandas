@@ -10,7 +10,7 @@ In this lesson, you'll learn how to use some of the key summary statistics metho
 You will be able to:
 
 * Understand and use the `df.describe()` and `df.info()` summary statistics methods
-* Use built-in Pandas methods for calculating summary statistics (`.mean()`, `.std()`, `.count()`, `.sum()`, `.mode()`, `.median()`, `.std()`, `.var()` and `.quantile()`)
+* Use built-in Pandas methods for calculating summary statistics (`.mean()`, `.std()`, `.count()`, `.sum()`, `.mode()`, `.median()`, `.var()` and `.quantile()`)
 * Apply a function to every element in a Series or DataFrame using `s.apply()` and `df.applymap()`
 
 
@@ -267,8 +267,10 @@ df['Age'].median()
 
 There are many different statistical methods built into pandas DataFrames--these are just a few! We will not list all of them, but here are some common ones you'll probably make use of early and often:
 
+* `.mode()` -- the mode of the column
 * `.count()` -- the count of the total number of entries in a column
 * `.std()` --  the standard deviation for the column
+* `.var()` -- the variance for the column  
 * `.sum()` -- the sum of all values in the column
 * `.cumsum()` -- the cumulative sum, where each cell index contains the sum of all indices lower than, and including, itself.
 
@@ -382,5 +384,5 @@ df['Age'].head()
 In this lesson, you learned how to:
 
 * Understand and use the `df.describe()` and `df.info()` summary statistics methods
-* Use built-in Pandas methods for calculating summary statistics (`.mean()`, `.std()`, `.count()`, `.sum()`, `.mean()`, `.median()`, `.std()`, `.var()` and `.quantile()`)
+* Use built-in Pandas methods for calculating summary statistics (`.mean()`, `.std()`, `.count()`, `.sum()`, `.mode()`, `.median()`, `.var()` and `.quantile()`)
 * Apply a function to every element in a Series or DataFrame using `s.apply()` and `df.applymap()`
