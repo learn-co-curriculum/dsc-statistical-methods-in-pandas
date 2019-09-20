@@ -10,7 +10,7 @@ In this lesson, you'll learn how to use some of the key summary statistics metho
 You will be able to:
 
 * Understand and use the `df.describe()` and `df.info()` summary statistics methods
-* Use built-in Pandas methods for calculating summary statistics (`.mean()`, `.std()`, `.count()`, `.sum()`, `.mode()`, `.median()`, `.var()` and `.quantile()`)
+* Use built-in Pandas methods for calculating summary statistics 
 * Apply a function to every element in a Series or DataFrame using `s.apply()` and `df.applymap()`
 
 
@@ -20,12 +20,12 @@ When working with a new dataset, the first step is always to begin to understand
 
 ### Using `df.info()`
 
-The `df.info()` method provides us with summary **_metadata_** about our DataFrame--that is, it gives us data about our dataset, such as how many rows and columns it contains, and what data types they are stored as.  Let's demonstrate this by reading in the titanic dataset and calling the `info()` function on the DataFrame we store the dataset in. 
+The `df.info()` method provides us with summary **_metadata_** about our DataFrame -- that is, it gives us data about our dataset, such as how many rows and columns it contains, and what data types they are stored as.  Let's demonstrate this by reading in the titanic dataset and calling the `.info()` method on the DataFrame. 
 
 
 ```python
 import pandas as pd
-df  = pd.read_csv('titanic.csv')
+df = pd.read_csv('titanic.csv')
 df.info()
 ```
 
@@ -265,7 +265,7 @@ df['Age'].median()
 
 
 
-There are many different statistical methods built into pandas DataFrames--these are just a few! We will not list all of them, but here are some common ones you'll probably make use of early and often:
+There are many different statistical methods built into pandas DataFrames -- these are just a few! We will not list all of them, but here are some common ones you'll probably make use of early and often:
 
 * `.mode()` -- the mode of the column
 * `.count()` -- the count of the total number of entries in a column
@@ -277,7 +277,7 @@ There are many different statistical methods built into pandas DataFrames--these
 
 ### Summary Statistics for Categorical Columns
 
-Obviously, we cannot calculate most summary statistics on columns that contain non-numeric data--there's no way for us to find the mean of the letters in the `Embarked` column, for instance.  However, there are some summary statistics we can use to help us better understand our categorical columns. 
+Obviously, we cannot calculate most summary statistics on columns that contain non-numeric data -- there's no way for us to find the mean of the letters in the `Embarked` column, for instance.  However, there are some summary statistics we can use to help us better understand our categorical columns. 
 
 See the examples in the cell below:
 
@@ -316,9 +316,9 @@ These methods are extremely useful when dealing with categorical data!
 
 ### Calculating on the Fly with `.apply()` and `.applymap()`
 
-Sometimes, we'll need to make changes to our dataset, or to compute functions on our data that aren't built in to pandas.  We can do this by passing lambda values into the `apply()` method when working with pandas series, and the `.applymap()` method when working with pandas DataFrames. 
+Sometimes, we'll need to make changes to our dataset, or to compute functions on our data that aren't built-in to pandas.  We can do this by passing lambda values into the `apply()` method when working with pandas series, and the `.applymap()` method when working with pandas DataFrames. 
 
-Note that both of these do not mutate the original dataset--instead, they return a copy of the Series or DataFrame containing the result. 
+Note that both of these do not mutate the original dataset -- instead, they return a copy of the Series or DataFrame containing the result. 
 
 See the example in the cell below:
 
@@ -383,6 +383,6 @@ df['Age'].head()
 
 In this lesson, you learned how to:
 
-* Understand and use the `df.describe()` and `df.info()` summary statistics methods
-* Use built-in Pandas methods for calculating summary statistics (`.mean()`, `.std()`, `.count()`, `.sum()`, `.mode()`, `.median()`, `.var()` and `.quantile()`)
-* Apply a function to every element in a Series or DataFrame using `s.apply()` and `df.applymap()`
+* Understand and use the `df.describe()` and `df.info()` summary statistics methods 
+* Use built-in Pandas methods for calculating summary statistics 
+* Apply a function to every element in a Series or DataFrame using `s.apply()` and `df.applymap()` 
