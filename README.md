@@ -9,18 +9,18 @@ In this lesson, you'll learn how to use some of the key summary statistics metho
 
 You will be able to:
 
-* Understand and use the `df.describe()` and `df.info()` summary statistics methods
-* Use built-in Pandas methods for calculating summary statistics 
-* Apply a function to every element in a Series or DataFrame using `s.apply()` and `df.applymap()`
+- Understand and use the `df.describe()` and `df.info()` summary statistics methods
+- Use built-in Pandas methods for calculating summary statistics 
+- Apply a function to every element in a Series or DataFrame using `s.apply()` and `df.applymap()`
 
 
 ## Getting DataFrame-Level Summary Statistics
 
-When working with a new dataset, the first step is always to begin to understand what makes up that dataset. The pandas DataFrame class contains two built-in methods that make this very easy for us. 
+When working with a new dataset, the first step is always to begin to understand what makes up that dataset. The Pandas DataFrame class contains two built-in methods that make this very easy for us. 
 
 ### Using `df.info()`
 
-The `df.info()` method provides us with summary **_metadata_** about our DataFrame -- that is, it gives us data about our dataset, such as how many rows and columns it contains, and what data types they are stored as.  Let's demonstrate this by reading in the titanic dataset and calling the `.info()` method on the DataFrame. 
+The `df.info()` method provides us with summary **_metadata_** about our DataFrame -- that is, it gives us data about our dataset, such as how many rows and columns it contains, and what data types they are stored as.  Let's demonstrate this by reading in the Titanic dataset and calling the `.info()` method on the DataFrame. 
 
 
 ```python
@@ -63,7 +63,7 @@ This sort of information about a dataset is called **_metadata_**, since it's da
 
 ### Using `.describe()` 
 
-The next step in Exploratory Data Analysis (EDA) is usually to dig into the summary statistics of the dataset, and get a feel for the data each column contains.  Rather than force us to deal with the tedium of doing this individually for every column, pandas DataFrames provide the handy `df.describe()` method which calculates the basic summary statistics for each column for us automatically. 
+The next step in Exploratory Data Analysis (EDA) is usually to dig into the summary statistics of the dataset, and get a feel for the data each column contains.  Rather than force us to deal with the tedium of doing this individually for every column, Pandas DataFrames provide the handy `df.describe()` method which calculates the basic summary statistics for each column for us automatically. 
 
 See the example in the cell below.
 
@@ -265,7 +265,7 @@ df['Age'].median()
 
 
 
-There are many different statistical methods built into pandas DataFrames -- these are just a few! We will not list all of them, but here are some common ones you'll probably make use of early and often:
+There are many different statistical methods built into Pandas DataFrames -- these are just a few! We will not list all of them, but here are some common ones you'll probably make use of early and often:
 
 * `.mode()` -- the mode of the column
 * `.count()` -- the count of the total number of entries in a column
@@ -316,7 +316,7 @@ These methods are extremely useful when dealing with categorical data!
 
 ### Calculating on the Fly with `.apply()` and `.applymap()`
 
-Sometimes, we'll need to make changes to our dataset, or to compute functions on our data that aren't built-in to pandas.  We can do this by passing lambda values into the `apply()` method when working with pandas series, and the `.applymap()` method when working with pandas DataFrames. 
+Sometimes, we'll need to make changes to our dataset, or to compute functions on our data that aren't built-in to Pandas.  We can do this by passing lambda values into the `apply()` method when working with Pandas series, and the `.applymap()` method when working with Pandas DataFrames. 
 
 Note that both of these do not mutate the original dataset -- instead, they return a copy of the Series or DataFrame containing the result. 
 
