@@ -9,9 +9,8 @@ In this lesson, you'll learn how to use some of the key summary statistics metho
 
 You will be able to:
 
-- Understand and use the `df.describe()` and `df.info()` summary statistics methods
-- Use built-in Pandas methods for calculating summary statistics 
-- Apply a function to every element in a Series or DataFrame using `s.apply()` and `df.applymap()`
+- Calculate summary statistics for a series and DataFrame 
+- Use the `.apply()` or `.applymap()` methods to apply a function to a pandas series or DataFrame  
 
 
 ## Getting DataFrame-Level Summary Statistics
@@ -25,14 +24,13 @@ The `df.info()` method provides us with summary **_metadata_** about our DataFra
 
 ```python
 import pandas as pd
-df = pd.read_csv('titanic.csv')
+df = pd.read_csv('titanic.csv', index_col=0)
 df.info()
 ```
 
     <class 'pandas.core.frame.DataFrame'>
-    RangeIndex: 891 entries, 0 to 890
-    Data columns (total 13 columns):
-    Unnamed: 0     891 non-null int64
+    Int64Index: 891 entries, 0 to 890
+    Data columns (total 12 columns):
     PassengerId    891 non-null int64
     Survived       891 non-null int64
     Pclass         891 non-null object
@@ -45,8 +43,8 @@ df.info()
     Fare           891 non-null float64
     Cabin          204 non-null object
     Embarked       889 non-null object
-    dtypes: float64(2), int64(5), object(6)
-    memory usage: 90.6+ KB
+    dtypes: float64(2), int64(4), object(6)
+    memory usage: 90.5+ KB
 
 
 As we can see from the output above, the `.info()` method provides us with great information about the characteristics of the DataFrame, without telling us anything about the data it actually contains. 
@@ -93,7 +91,6 @@ df.describe()
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Unnamed: 0</th>
       <th>PassengerId</th>
       <th>Survived</th>
       <th>Age</th>
@@ -107,7 +104,6 @@ df.describe()
       <th>count</th>
       <td>891.000000</td>
       <td>891.000000</td>
-      <td>891.000000</td>
       <td>714.000000</td>
       <td>891.000000</td>
       <td>891.000000</td>
@@ -115,7 +111,6 @@ df.describe()
     </tr>
     <tr>
       <th>mean</th>
-      <td>445.000000</td>
       <td>446.000000</td>
       <td>0.383838</td>
       <td>29.699118</td>
@@ -126,7 +121,6 @@ df.describe()
     <tr>
       <th>std</th>
       <td>257.353842</td>
-      <td>257.353842</td>
       <td>0.486592</td>
       <td>14.526497</td>
       <td>1.102743</td>
@@ -135,7 +129,6 @@ df.describe()
     </tr>
     <tr>
       <th>min</th>
-      <td>0.000000</td>
       <td>1.000000</td>
       <td>0.000000</td>
       <td>0.420000</td>
@@ -145,7 +138,6 @@ df.describe()
     </tr>
     <tr>
       <th>25%</th>
-      <td>222.500000</td>
       <td>223.500000</td>
       <td>0.000000</td>
       <td>20.125000</td>
@@ -155,7 +147,6 @@ df.describe()
     </tr>
     <tr>
       <th>50%</th>
-      <td>445.000000</td>
       <td>446.000000</td>
       <td>0.000000</td>
       <td>28.000000</td>
@@ -165,7 +156,6 @@ df.describe()
     </tr>
     <tr>
       <th>75%</th>
-      <td>667.500000</td>
       <td>668.500000</td>
       <td>1.000000</td>
       <td>38.000000</td>
@@ -175,7 +165,6 @@ df.describe()
     </tr>
     <tr>
       <th>max</th>
-      <td>890.000000</td>
       <td>891.000000</td>
       <td>1.000000</td>
       <td>80.000000</td>
@@ -204,7 +193,7 @@ Use the `.describe()` method to quickly help you get a feel for your datasets wh
 
 If we need to calculate individual statistics about a column, we can also do this easily.  Pandas DataFrames and Series objects come with a plethora of built-in methods to instantly calculate summary statistics for us. 
 
-See the code block below for examples:
+See the code blocks below for examples:
 
 
 ```python
@@ -215,7 +204,6 @@ df.mean()
 
 
 
-    Unnamed: 0     445.000000
     PassengerId    446.000000
     Survived         0.383838
     Age             29.699118
@@ -330,9 +318,8 @@ string_df.info()
 ```
 
     <class 'pandas.core.frame.DataFrame'>
-    RangeIndex: 891 entries, 0 to 890
-    Data columns (total 13 columns):
-    Unnamed: 0     891 non-null object
+    Int64Index: 891 entries, 0 to 890
+    Data columns (total 12 columns):
     PassengerId    891 non-null object
     Survived       891 non-null object
     Pclass         891 non-null object
@@ -345,8 +332,8 @@ string_df.info()
     Fare           891 non-null object
     Cabin          891 non-null object
     Embarked       891 non-null object
-    dtypes: object(13)
-    memory usage: 90.6+ KB
+    dtypes: object(12)
+    memory usage: 90.5+ KB
 
 
 
