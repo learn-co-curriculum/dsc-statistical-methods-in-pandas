@@ -1,4 +1,3 @@
-
 # Statistical Methods in Pandas
 
 ## Introduction
@@ -253,7 +252,7 @@ df['Age'].median()
 
 
 
-There are many different statistical methods built into Pandas DataFrames -- these are just a few! We will not list all of them, but here are some common ones you'll probably make use of early and often:
+There are many different statistical methods built into Pandas DataFrames -- these are just a few. We will not list all of them, but here are some common ones you'll probably make use of early and often:
 
 * `.mode()` -- the mode of the column
 * `.count()` -- the count of the total number of entries in a column
@@ -296,7 +295,7 @@ df['Embarked'].value_counts()
 
 
 
-These methods are extremely useful when dealing with categorical data! 
+These methods are extremely useful when dealing with categorical data. 
 
 `.unique()` shows us all the unique values contained in the column. 
 
